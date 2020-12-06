@@ -15,7 +15,7 @@ using std::cout;
 
 int main()
 {
-	Account a1;
+	Account a1{};
 	a1.Deposit(90);
 	cout << "After depositing $90 " <<
 		"balance is " << a1.GetBalance() << '\n';
