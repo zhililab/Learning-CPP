@@ -27,6 +27,8 @@ bool Account::Deposit(int amount)
 	{
 		balance += amount;
 		log.push_back(Transaction(amount, "Deposit"));
+		balance -= 1;
+		log.push_back(Transaction(1, "Service Charge"));
 		return true;
 	}
 	else
@@ -46,6 +48,8 @@ bool Account::Withdraw(int amount)
 	{
 		balance -= amount;
 		log.push_back(Transaction(amount, "Withdraw"));
+		balance -= 1;
+		log.push_back(Transaction(1, "Service Charge"));
 		return true;
 	}
 	return false;
