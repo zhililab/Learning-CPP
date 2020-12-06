@@ -3,7 +3,7 @@
 using std::string;
 using std::to_string;
 
-Transaction::Transaction(int amt, string kind) :amount(0), type(kind)
+Transaction::Transaction(int amt, string kind) :amount(amt), type(kind)
 {
 }
 
