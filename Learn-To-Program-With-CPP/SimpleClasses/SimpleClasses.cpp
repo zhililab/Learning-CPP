@@ -19,7 +19,7 @@ int main()
 	a1.Deposit(90);
 	cout << "After depositing $90 " <<
 		"balance is " << a1.GetBalance() << '\n';
-	for (auto s : a1.Report())
+	for (auto &s : a1.Report())
 	{
 		cout << s << '\n';
 	}
@@ -31,7 +31,7 @@ int main()
 	}
 
 	cout << "After withdrawing $50 then $100" << '\n';
-	for (auto s : a1.Report())
+	for (auto &s : a1.Report())
 	{
 		cout << s << '\n';
 	}
